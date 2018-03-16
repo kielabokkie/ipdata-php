@@ -5,7 +5,7 @@ namespace Kielabokkie;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 
-class IpData
+class Ipdata
 {
     const API_ENDPOINT = 'https://api.ipdata.co';
 

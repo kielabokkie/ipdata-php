@@ -1,4 +1,4 @@
-# Ipdata.co client library for PHP
+# Ipdata client library for PHP
 
 Get IP address information the using ipdata.co API.
 
@@ -13,6 +13,6 @@ Recommended installation is by running the composer require command. This will i
 ### Lookup a specific address
 
 ```
-$ipdata = new \Kielabokkie\IpData;
+$ipdata = new \Kielabokkie\Ipdata;
 $res = $ipdata->lookup('8.8.8.8');
 ```
