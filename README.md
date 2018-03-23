@@ -4,7 +4,7 @@ Get IP address information the using ipdata.co API.
 
 ## Installation
 
-Recommended installation is by running the composer require command. This will install the latest stable version of this extension.
+You can install the package via composer:
 
     composer require kielabokkie/ipdata
 

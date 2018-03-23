@@ -4,6 +4,8 @@ namespace Kielabokkie;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use Kielabokkie\Models\IpdataModel;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class Ipdata
 {
@@ -44,10 +46,10 @@ class Ipdata
 
         try {
             $response = $this->client->get($uri);
+
+            return new IpdataModel(json_decode($response->getBody(), true));
         } catch (ClientException $e) {
             return $e->getResponse();
         }
-
-        return json_decode($response->getBody());
     }
 }
