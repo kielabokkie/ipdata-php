@@ -20,12 +20,11 @@ class IpdataTest extends TestCase
         $mock->allows()
             ->lookup()
             ->once()
-            ->andReturns(new IpdataModel(['ip' => '1.2.3.4']));
+            ->andReturns((object) ['ip' => '1.2.3.4']);
 
         $res = $mock->lookup();
 
         $this->assertEquals('1.2.3.4', $res->ip);
-        $this->assertInstanceOf(IpdataModel::class, $res);
     }
 
     public function testLookupWithIp()
@@ -35,11 +34,10 @@ class IpdataTest extends TestCase
         $mock->allows()
             ->lookup('8.8.8.8')
             ->once()
-            ->andReturns(new IpdataModel(['ip' => '8.8.8.8']));
+            ->andReturns((object) ['ip' => '8.8.8.8']);
 
         $res = $mock->lookup('8.8.8.8');
 
         $this->assertEquals('8.8.8.8', $res->ip);
-        $this->assertInstanceOf(IpdataModel::class, $res);
     }
 }
