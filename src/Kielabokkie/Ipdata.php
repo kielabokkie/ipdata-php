@@ -4,7 +4,6 @@ namespace Kielabokkie;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
-use Symfony\Component\HttpFoundation\JsonResponse;
 
 class Ipdata
 {
