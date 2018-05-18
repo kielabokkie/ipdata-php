@@ -10,7 +10,14 @@ You can install the package via composer:
 
 ## Usage
 
-### Lookup a specific address
+### Lookup of the calling IP address
+
+```
+$ipdata = new \Kielabokkie\Ipdata;
+$res = $ipdata->lookup();
+```
+
+### Lookup a specific IP address
 
 ```
 $ipdata = new \Kielabokkie\Ipdata;
