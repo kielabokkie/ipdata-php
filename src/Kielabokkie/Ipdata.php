@@ -47,7 +47,7 @@ class Ipdata
 
             return json_decode($response->getBody());
         } catch (ClientException $e) {
-            return $e->getResponse();
+            throw $e;
         }
     }
 }
