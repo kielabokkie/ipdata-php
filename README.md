@@ -1,6 +1,6 @@
 # Ipdata client library for PHP
 
-Get IP address information the using ipdata.co API.
+Get IP address information the using the [ipdata.co](https://ipdata.co) API. If you are using Laravel, check out [kielabokkie/laravel-ipdata](https://github.com/kielabokkie/laravel-ipdata).
 
 ## Installation
 
