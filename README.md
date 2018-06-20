@@ -1,5 +1,9 @@
 # Ipdata client library for PHP
 
+[![Author](http://img.shields.io/badge/by-@kielabokkie-lightgrey.svg?style=flat-square)](https://twitter.com/kielabokkie)
+[![Packagist Version](https://img.shields.io/packagist/v/kielabokkie/ipdata.svg?style=flat-square)](https://packagist.org/packages/kielabokkie/ipdata)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+
 Get IP address information the using the [ipdata.co](https://ipdata.co) API. If you are using Laravel, check out [kielabokkie/laravel-ipdata](https://github.com/kielabokkie/laravel-ipdata).
 
 ## Prerequisites
