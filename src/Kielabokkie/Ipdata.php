@@ -9,7 +9,11 @@ class Ipdata
 {
     const API_ENDPOINT = 'https://api.ipdata.co';
 
+    /** @var \GuzzleHttp\Client */
     private $client;
+
+    /** @var string */
+    private $apiKey;
 
     /**
      * Create a IpData instance.
@@ -20,9 +24,7 @@ class Ipdata
     {
         $options['base_uri'] = self::API_ENDPOINT;
 
-        if ($apiKey !== null) {
-            $options['headers'] = ['api-key' => $apiKey];
-        }
+        $this->apiKey = $apiKey;
 
         $this->client = new Client($options);
     }
@@ -42,7 +44,12 @@ class Ipdata
             $uri = sprintf('/%s', $ip);
         }
 
+        if ($this->apiKey !== null) {
+            $uri = sprintf('%s?api-key=%s', $uri, $this->apiKey);
+        }
+
         try {
+            echo $uri;
             $response = $this->client->get($uri);
 
             return json_decode($response->getBody());
