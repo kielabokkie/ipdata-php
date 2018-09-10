@@ -49,7 +49,6 @@ class Ipdata
         }
 
         try {
-            echo $uri;
             $response = $this->client->get($uri);
 
             return json_decode($response->getBody());
